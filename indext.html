@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>رسالة شكر وخدمة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #0f172a; /* slate-900 */
+      --bg-2: #1e293b; /* slate-800 */
+      --accent: #f59e0b; /* amber-500 */
+      --text: #e5e7eb; /* gray-200 */
+      --muted: #cbd5e1; /* slate-300 */
+      --card: rgba(255,255,255,.06);
+      --card-border: rgba(255,255,255,.12);
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Cairo", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans Arabic", sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 80% -10%, #1f2937 0%, transparent 60%),
+                  radial-gradient(1000px 700px at -10% 90%, #0b1020 0%, transparent 60%),
+                  linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .container{
+      width:min(960px, 100%);
+    }
+    header{
+      text-align:center;
+      margin-bottom:22px;
+    }
+    .brand{
+      font-family:"Reem Kufi", "Cairo", serif;
+      font-weight:600;
+      letter-spacing:.5px;
+      font-size:clamp(28px, 3vw + 12px, 46px);
+      margin:0 0 8px;
+      background: linear-gradient(90deg, #fff, var(--muted));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:clamp(14px, 1vw + 10px, 18px);
+      margin:0;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--card-border);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      backdrop-filter: blur(8px);
+    }
+    .ribbon{
+      position:relative;
+      padding:14px 22px;
+      background:linear-gradient(90deg, rgba(245,158,11,.17), rgba(245,158,11,.05));
+      border-bottom:1px solid var(--card-border);
+      font-weight:700;
+      color:#fffbeb; /* amber-50 */
+      display:flex;gap:10px;align-items:center;justify-content:center;
+    }
+    .ribbon::before, .ribbon::after{
+      content:"";display:block;width:10px;height:10px;border-radius:50%;
+      border:2px solid rgba(245,158,11,.45);
+    }
+    main{padding:28px}
+    .hero{
+      font-size:clamp(18px, 1.2vw + 14px, 22px);
+      line-height:1.9;
+      margin:0 0 18px;
+    }
+    blockquote{
+      margin:22px 0;
+      padding:18px 22px;
+      border:1px dashed rgba(245,158,11,.45);
+      border-radius:16px;
+      background:linear-gradient(180deg, rgba(245,158,11,.06), rgba(245,158,11,.02));
+      position:relative;
+    }
+    blockquote::before{
+      content:"\201C"; /* Arabic-style large opening quote visually works */
+      position:absolute;inset-inline-start:12px;top:-18px;
+      font-size:60px;line-height:1;color:rgba(245,158,11,.8);
+      font-family:"Reem Kufi", serif;
+    }
+    blockquote p{margin:0;line-height:2}
+    .section-title{
+      font-weight:800;
+      margin:26px 0 8px;
+      font-size:clamp(18px, 1.2vw + 12px, 24px);
+      color:#fef3c7; /* amber-100 */
+    }
+    .closing{
+      margin-top:10px;
+      font-weight:600;
+      color:#fde68a;
+    }
+    .epigraph{
+      margin:26px 0 0;
+      text-align:center;
+      font-style:italic;
+      font-weight:700;
+      color:#fff;
+      letter-spacing:.3px;
+    }
+    .rule{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.25), transparent);border:0;margin:22px 0}
+    footer{
+      padding:16px 24px;
+      background:rgba(0,0,0,.25);
+      border-top:1px solid var(--card-border);
+      color:var(--muted);
+      font-size:14px;
+      display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+    }
+    .badge{
+      display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(245,158,11,.35);
+      background:rgba(245,158,11,.08);color:#fffbeb;font-weight:700;font-size:12px;
+    }
+
+    /* Subtle entrance animation */
+    @keyframes fadeUp{from{opacity:0;transform:translate3d(0,12px,0)}to{opacity:1;transform:none}}
+    .card, header, .badge{animation:fadeUp .7s ease both}
+
+    /* Print styles */
+    @media print{
+      body{background:#fff;color:#111}
+      .card{box-shadow:none;background:#fff;border-color:#ddd}
+      .ribbon{background:#fff;color:#000;border-bottom:1px solid #ddd}
+      .epigraph, .section-title{color:#111}
+      footer{background:#fff;color:#333;border-top:1px solid #ddd}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="brand">رسالة شكر ومحبة</h1>
+      <p class="sub">كلمات من القلب لكل من شاركنا الخدمة والرحلة</p>
+    </header>
+
+    <article class="card" role="article" aria-label="رسالة شكر">
+      <div class="ribbon" aria-hidden="true">
+        <span class="badge">#خدمة</span>
+        <span class="badge">#امتنان</span>
+        <span class="badge">#محبة</span>
+      </div>
+
+      <main>
+        <p class="hero">
+          شكرا لأنكن مكنتوش مجرد اجتماع لكن بيت مليان دفء وسلام. اتعلمنا هنا إن الخدمة مش مجرد واجب، لكنها أسلوب حياة.<br>
+          اتعلمنا إزاي نحب ربنا أكتر..
+        </p>
+
+        <blockquote>
+          <p>
+            “لكل خادم وقف جنبنا، لكل كلمة مشجعة، لكل ابتسامة، لكل صلاة اترفعِت من أجلنا… شكراً.<br>
+            أنتم مش بس علمتونا، أنتم احتضنتونا. عشنا معاكم محبة المسيح العملية اللي بتتقدم من غير مقابل.
+          </p>
+        </blockquote>
+
+        <h2 class="section-title">بداية جديدة</h2>
+        <p>
+          “بنختم مرحلة، لكن في الحقيقة دي بداية جديدة… بداية لخدمة أوسع، ومسئولية أكبر.<br>
+          صلوا من أجلنا، علشان نكون أمناء، زي ما أنتم كنتم أمناء.
+        </p>
+
+        <hr class="rule"/>
+
+        <p class="epigraph">«ما تعمله من أجل المسيح يبقى إلى الأبد».</p>
+        <p class="closing">بارك الله تعب محبتكم، ويديم سلامه في بيوتكم وقلوبكم.</p>
+      </main>
+
+      <footer>
+        <span>يمكن مشاركة هذه الصفحة مع من تحبون كتذكار جميل.</span>
+        <span>© 2025 — بخط محبة وشكر.</span>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
